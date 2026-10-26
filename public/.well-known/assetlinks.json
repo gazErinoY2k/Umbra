@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.umbra.paranormal",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:44:5F:CE:2D:71:04:7E:48:EE:90:99:50:96:34:60:08:FB:00:4E:51:72:C5:B7:D4:02:49:EC:4C:E2"
+      ]
+    }
+  }
+]

@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --void: #0b0d11;
+    --panel: #141820;
+    --line: #262c38;
+    --bone: #e9e3d3;
+    --mute: #8b8fa0;
+    --brass: #c0a062;
+    --teal: #62b3a8;
+    --ember: #d0583c;
+    color-scheme: dark;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: radial-gradient(120% 70% at 50% -10%, #1b2230 0, var(--void) 65%) fixed var(--void);
+    color: var(--bone);
+    font-family: 'Jost', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  h1, h2, h3, .font-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  code, kbd, samp, pre, .font-tech {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.96); }
+}
+
+@keyframes wordRise {
+  0% { opacity: 0; letter-spacing: 0.25em; transform: translateY(6px); }
+  25% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 0.85; }
+  100% { opacity: 0.35; letter-spacing: 0.04em; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(192, 160, 98, 0.4)); }
+  50% { filter: drop-shadow(0 0 16px rgba(192, 160, 98, 0.75)); }
+}
+
+@keyframes radarSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-breathe {
+  animation: breathe 5s ease-in-out infinite;
+}
+
+.animate-word {
+  animation: wordRise 2.8s ease forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom scrollbars for logs */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 13, 17, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: #262c38;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c0a062;
+}
+
+/* Print styling for Case File reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

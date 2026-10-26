@@ -1,0 +1,6 @@
+{
+  "name": "Umbra – Paranormal Investigation Suite",
+  "description": "Professional gothic paranormal investigation suite with EMF meter, Dead Box radio sweep, EVP spectrogram recorder, SLS motion camera, Spirit Talker, and APK/PWA install support.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
